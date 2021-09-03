@@ -21,7 +21,8 @@
         <ImageView
             android:id="@+id/top"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:clickable="true"
             android:contentDescription="@string/top_lane"
             android:focusable="true"
@@ -30,7 +31,8 @@
         <ImageView
             android:id="@+id/jungle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:clickable="true"
             android:contentDescription="@string/jungle"
             android:focusable="true"
@@ -39,7 +41,8 @@
         <ImageView
             android:id="@+id/mid"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:clickable="true"
             android:contentDescription="@string/mid_lane"
             android:focusable="true"
@@ -48,7 +51,8 @@
         <ImageView
             android:id="@+id/adc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:clickable="true"
             android:contentDescription="@string/adc"
             android:focusable="true"
@@ -57,7 +61,8 @@
         <ImageView
             android:id="@+id/support"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             android:clickable="true"
             android:contentDescription="@string/support"
             android:focusable="true"
