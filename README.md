@@ -5,15 +5,16 @@ It uses data gathered from op.gg to determine which champs go into which role.
 
 ## Releases
 <div align="center">
-  
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ej5997/RandomChampAndroidApp?style=for-the-badge)
-
+<a href="https://github.com/ej5997/RandomChampAndroidApp/releases/tag/v0.1">
+<img src="https://img.shields.io/github/v/release/ej5997/RandomChampAndroidApp?style=for-the-badge" />
+</a>
 </div>
 
 ## Issues/To-do:
 <div align="center">
-  
-![GitHub issues](https://img.shields.io/github/issues/ej5997/RandomChampAndroidApp?style=for-the-badge)
+<a href="https://github.com/ej5997/RandomChampAndroidApp/issues">
+<img src="https://img.shields.io/github/issues/ej5997/RandomChampAndroidApp?style=for-the-badge" />
+</a>
 </div>
 
 ## Emulator Screenshots
