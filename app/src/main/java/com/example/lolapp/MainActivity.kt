@@ -21,7 +21,6 @@ class MainActivity : AppCompatActivity() {
             val o = Intent(this, MainActivityLandscape::class.java)
             startActivity(o)
         }
-
         // set content view
         setContentView(R.layout.activity_main)
         // on click function that sets activity to ChampActivity

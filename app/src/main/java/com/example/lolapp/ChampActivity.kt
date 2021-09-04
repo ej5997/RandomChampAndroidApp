@@ -21,7 +21,12 @@ class ChampActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // get role passed from intent
+        val role = intent.getStringExtra("role")
+        // set content view after role for orientation check
         setContentView(R.layout.champ)
+
+        // refresh button
         val refresh = findViewById<ImageButton>(R.id.refreshBtn)
         // var init for champ image and text display
         val image = findViewById<ImageView>(R.id.champImage)
@@ -31,6 +36,7 @@ class ChampActivity : AppCompatActivity() {
         // var init for champ name and filename for image resource
         var champ: String?
         var champRes: String?
+
 
         // sets the champ based on role passed as extra from MainActivity
         // created as a function in order to allow for refresh button
@@ -84,7 +90,6 @@ class ChampActivity : AppCompatActivity() {
             }
         }
 
-        val role = intent.getStringExtra("role")
         setChamp(role)
         refresh.setOnClickListener {setChamp(role)}
     }
