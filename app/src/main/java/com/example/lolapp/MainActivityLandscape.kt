@@ -6,24 +6,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
-import androidx.appcompat.app.AlertDialog
 
-@Suppress("SpellCheckingInspection")
-class MainActivity : AppCompatActivity() {
-    @Suppress("SpellCheckingInspection")
-        override fun onCreate(savedInstanceState: Bundle?) {
+class MainActivityLandscape : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // init var for role selected
         var role: String
         // check orientation
         val orient = resources.configuration.orientation
-        if(orient == Configuration.ORIENTATION_LANDSCAPE){
-            val o = Intent(this, MainActivityLandscape::class.java)
+        if(orient == Configuration.ORIENTATION_PORTRAIT){
+            val o = Intent(this, MainActivity::class.java)
             startActivity(o)
         }
-
         // set content view
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main_landscape)
+
         // on click function that sets activity to ChampActivity
         fun topList(v: View) {
             // set role and pass it to ChampActivity
@@ -89,7 +86,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
+        if(newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
             val o = Intent(this, MainActivity::class.java)
             startActivity(o)
         }
