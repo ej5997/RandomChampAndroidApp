@@ -68,5 +68,4 @@
             android:focusable="true"
             app:srcCompat="@drawable/support" />
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,12 +15,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         // init var for role selected
         var role: String
-        // check orientation
-        val orient = resources.configuration.orientation
-        if(orient == Configuration.ORIENTATION_LANDSCAPE){
-            val o = Intent(this, MainActivityLandscape::class.java)
-            startActivity(o)
-        }
         // set content view
         setContentView(R.layout.activity_main)
         // on click function that sets activity to ChampActivity
@@ -84,13 +78,5 @@ class MainActivity : AppCompatActivity() {
         // onclick listener for supp image
         val suppImg = findViewById<ImageView>(R.id.support)
         suppImg.setOnClickListener(::supportList)
-    }
-
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        super.onConfigurationChanged(newConfig)
-        if(newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE){
-            val o = Intent(this, MainActivity::class.java)
-            startActivity(o)
-        }
     }
 }
