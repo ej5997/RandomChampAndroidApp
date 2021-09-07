@@ -18,6 +18,13 @@ class ChampActivity : AppCompatActivity() {
         "adc" to listOf("Aphelios","Ashe","Caitlyn","Cassiopeia","Draven","Ezreal","Jhin",
             "Jinx","Kai'Sa","Kalista","Kog'Maw","Lucian","Miss Fortune","Samira","Senna","Sivir","Swain","Syndra","Tristana","Twitch","Varus","Vayne","Xayah","Yasuo","Ziggs"),
         "support" to listOf("Alistar","Amumu","Bard","Blitzcrank","Brand","Braum","Fiddlesticks","Galio","Gragas","Janna","Karma","Leona","Lulu","Lux","Maokai","Morgana","Nami","Nautilus","Pantheon","Poppy","Pyke","Rakan","Rell","Senna","Seraphine","Sett","Shaco","Shen","Sona","Soraka","Swain","Tahm Kench","Taric","Thresh","Trundle","Veigar","Vel'Koz","Xerath","Yuumi","Zac","Zilean","Zyra"))
+    // var init for image resourceID to display image
+    private var resourceId: Int = 0
+
+    // var init for champ name and filename for image resource
+    private var champ: String? = null
+    private var champRes: String? = null
+    private var champText: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,11 +38,7 @@ class ChampActivity : AppCompatActivity() {
         // var init for champ image and text display
         val image = findViewById<ImageView>(R.id.champImage)
         val champtxt = findViewById<TextView>(R.id.champText)
-        // var init for image resourceID to display image
-        var resourceId: Int
-        // var init for champ name and filename for image resource
-        var champ: String?
-        var champRes: String?
+
 
 
         // sets the champ based on role passed as extra from MainActivity
@@ -49,7 +52,8 @@ class ChampActivity : AppCompatActivity() {
                     champRes = champRes?.lowercase()
                     resourceId = resources.getIdentifier("drawable/$champRes", "drawable,", packageName)
                     image.setImageResource(resourceId)
-                    champtxt.text = resources.getString(R.string.topSelect, champ)
+                    champText = resources.getString(R.string.topSelect, champ)
+                    champtxt.text = champText
                 }
                 // if role is jungle, pick jungler, set img and txt
                 "jgl"->{
@@ -58,7 +62,8 @@ class ChampActivity : AppCompatActivity() {
                     champRes = champRes?.lowercase()
                     resourceId = resources.getIdentifier("drawable/$champRes", "drawable,", packageName)
                     image.setImageResource(resourceId)
-                    champtxt.text = resources.getString(R.string.jglSelect, champ)
+                    champText = resources.getString(R.string.jglSelect, champ)
+                    champtxt.text = champText
                 }
                 // if role is mid, pick midlaner, set img and txt
                 "mid"->{
@@ -67,7 +72,8 @@ class ChampActivity : AppCompatActivity() {
                     champRes = champRes?.lowercase()
                     resourceId = resources.getIdentifier("drawable/$champRes", "drawable,", packageName)
                     image.setImageResource(resourceId)
-                    champtxt.text = resources.getString(R.string.midSelect, champ)
+                    champText = resources.getString(R.string.midSelect, champ)
+                    champtxt.text = champText
                 }
                 // if role is adc, pick adc, set img and txt
                 "adc"->{
@@ -76,7 +82,8 @@ class ChampActivity : AppCompatActivity() {
                     champRes = champRes?.lowercase()
                     resourceId = resources.getIdentifier("drawable/$champRes", "drawable,", packageName)
                     image.setImageResource(resourceId)
-                    champtxt.text = resources.getString(R.string.adcSelect, champ)
+                    champText = resources.getString(R.string.adcSelect, champ)
+                    champtxt.text = champText
                 }
                 // if role is supp, pick support, set img and txt
                 "supp"->{
@@ -85,12 +92,26 @@ class ChampActivity : AppCompatActivity() {
                     champRes = champRes?.lowercase()
                     resourceId = resources.getIdentifier("drawable/$champRes", "drawable,", packageName)
                     image.setImageResource(resourceId)
-                    champtxt.text = resources.getString(R.string.suppSelect, champ)
+                    champText = resources.getString(R.string.suppSelect, champ)
+                    champtxt.text = champText
                 }
             }
         }
-
         setChamp(role)
         refresh.setOnClickListener {setChamp(role)}
+        if(savedInstanceState != null){
+            champ = savedInstanceState.getString("champ")
+            resourceId = savedInstanceState.getInt("resId")
+            champText = savedInstanceState.getString("champtxt")
+            image.setImageResource(resourceId)
+            champtxt.text = champText
+        }
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("champ", champ)
+        outState.putInt("resId", resourceId)
+        outState.putString("champtxt", champText)
     }
 }
