@@ -19,12 +19,13 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
+            android:translationY="-15dp"
             app:layout_constraintBottom_toTopOf="@+id/refreshBtn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/champImage"
+            app:layout_constraintStart_toEndOf="@+id/champImage"
+            app:layout_constraintTop_toTopOf="@+id/champImage"
             app:layout_constraintWidth_max="wrap"
-            app:layout_constraintWidth_percent="0.8" />
+            app:layout_constraintWidth_percent="0.4" />
 
         <ImageButton
             android:id="@+id/refreshBtn"
@@ -32,10 +33,10 @@
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
             android:contentDescription="@string/refresh"
-            android:translationY="-20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:translationY="-40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/champImage"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/champImage"
             app:srcCompat="@drawable/refresh"
             app:tint="#FFCE6C" />
 
@@ -44,8 +45,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/selectedChamp"
-            android:translationY="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:translationX="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/aatrox"
