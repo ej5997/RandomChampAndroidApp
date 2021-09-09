@@ -2,6 +2,9 @@
 # RandomChampAndroidApp
 My first attempt at an Android App. The purpose of the app is to allow people to randomly choose a champ in their respective role.
 It uses data gathered from op.gg to determine which champs go into which role.
+## Download latest version:
+<div align="center">
+<a href="https://github.com/ej5997/RandomChampAndroidApp/releases/download/v0.3/ChampSelect.apk"><img src="https://img.shields.io/badge/-Download-blue?style=for-the-badge"/></a></div>
 
 ## Releases
 <div align="center">
