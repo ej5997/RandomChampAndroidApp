@@ -10,7 +10,7 @@
     <string name="defaultText">Default Text</string>
     <string name="topSelect">Why not play %1$s? You\'re on an island. Does it really matter?</string>
     <string name="jglSelect">Consider playing %1$s. It\'s a jgl gap no matter what you do.</string>
-    <string name="midSelect">Have you considered %1$s? Pro-play will probably get them nerfed soon.</string>
+    <string name="midSelect">Have you considered %1$s? Pro play will probably get them nerfed soon.</string>
     <string name="adcSelect">Play %1$s! You\'re going to get one-shot regardless.</string>
     <string name="suppSelect">%1$s! Just remember to abandon your adc at 7mins!</string>
     <string name="refresh">Reselect Champ</string>

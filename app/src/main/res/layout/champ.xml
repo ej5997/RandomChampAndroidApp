@@ -10,46 +10,50 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/champText"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-thin"
-            android:text="@string/defaultText"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            app:layout_constraintBottom_toTopOf="@+id/refreshBtn"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/champImage"
-            app:layout_constraintWidth_max="wrap"
-            app:layout_constraintWidth_percent="0.8" />
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/refreshBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FFFFFF"
-            android:contentDescription="@string/refresh"
-            android:translationY="-20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/refresh"
-            app:tint="#FFCE6C" />
+            <ImageView
+                android:id="@+id/champImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/selectedChamp"
+                app:srcCompat="@drawable/aatrox"
+                tools:ignore="ImageContrastCheck" />
 
-        <ImageView
-            android:id="@+id/champImage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/selectedChamp"
-            android:translationY="25dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/aatrox"
-            tools:ignore="ImageContrastCheck" />
+            <TextView
+                android:id="@+id/champText"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.9"
+                android:fontFamily="sans-serif-thin"
+                android:gravity="center"
+                android:text="@string/defaultText"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                app:layout_constraintWidth_max="wrap"
+                app:layout_constraintWidth_percent="0.7" />
 
+            <ImageButton
+                android:id="@+id/refreshBtn"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/refresh"
+                android:translationY="-5dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/refresh"
+                app:tint="#FFCE6C" />
+
+
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

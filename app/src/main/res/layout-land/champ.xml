@@ -25,10 +25,11 @@
             app:layout_constraintStart_toEndOf="@+id/champImage"
             app:layout_constraintTop_toTopOf="@+id/champImage"
             app:layout_constraintWidth_max="wrap"
-            app:layout_constraintWidth_percent="0.4" />
+            app:layout_constraintWidth_percent="0.35" />
 
         <ImageButton
             android:id="@+id/refreshBtn"
+            android:scaleType="fitCenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#00FFFFFF"
@@ -42,6 +43,7 @@
 
         <ImageView
             android:id="@+id/champImage"
+            android:scaleType="fitCenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/selectedChamp"
